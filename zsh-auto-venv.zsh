@@ -2,7 +2,7 @@ function _activate() {
     local venv_dir="$1"
 
     # Don't reactivate an already activated virtual environment
-    if [[ -z "$VIRTUAL_ENV" || "$venv_dir" != "$$VIRTUAL_ENV)" ]]; then
+    if [[ -z "$VIRTUAL_ENV" || "$venv_dir" != "$VIRTUAL_ENV" ]]; then
         source "$venv_dir/bin/activate"
     fi
 }
@@ -37,7 +37,6 @@ function _check_venv()
 
     if [[ -n "$venv_path" ]]; then
         _activate "$venv_path"
-        return
     else
         _deactivate
     fi
