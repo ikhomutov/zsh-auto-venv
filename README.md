@@ -34,7 +34,7 @@ Automatically activate venv when enter the project folder
 
 ### Manual (Git Clone)
 
-1. Clone this repository somewhere on your machine. This guide will assume `~/.zsh/zsh-autosuggestions`.
+1. Clone this repository somewhere on your machine.
 
     ```sh
     git clone https://github.com/ikhomutov/zsh-auto-venv ~/.zsh/zsh-auto-venv
